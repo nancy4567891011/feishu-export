@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 2,
+  "name": "多维表格导出工具",
+  "version": "1.0.0",
+  "description": "导出多维表格数据为文档和附件，支持Word、PDF、TXT格式，批量下载附件到本地文件夹",
+  "icon": {
+    "light": "./icon.png",
+    "dark": "./icon.png"
+  },
+  "entry": {
+    "desktop": "./index.html"
+  },
+  "permissions": [
+    "bitable:app",
+    "bitable:record",
+    "bitable:field",
+    "drive:drive",
+    "docx:write"
+  ],
+  "apiPermissions": [
+    "bitable:app",
+    "bitable:record:read",
+    "bitable:field:read",
+    "attachment:read"
+  ],
+  "categories": ["productivity", "data"],
+  "developer": {
+    "name": "多维表格导出工具开发者",
+    "email": "developer@example.com"
+  },
+  "blockTypeId": "blk_68824791e80c004ba9ddd3d"
+} 

@@ -1,0 +1,54 @@
+{
+  "manifest_version": 2,
+  "name": "多维表格导出工具",
+  "version": "1.0.0",
+  "description": "将飞书多维表格数据导出为文档和下载附件的插件",
+  "author": "飞书插件开发者",
+  "homepage_url": "https://feishu.cn",
+  "default_locale": "zh-CN",
+  
+  "permissions": [
+    "bitable:app",
+    "docx:base", 
+    "drive:base"
+  ],
+  
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  
+  "app": {
+    "urls": {
+      "primary": "index.html"
+    }
+  },
+  
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' 'unsafe-inline';"
+  },
+  
+  "host_permissions": [
+    "https://*.feishu.cn/*",
+    "https://*.larksuite.com/*"
+  ],
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "externally_connectable": {
+    "matches": [
+      "https://*.feishu.cn/*",
+      "https://*.larksuite.com/*"
+    ]
+  },
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["*.js", "*.css", "*.html"],
+      "matches": ["https://*.feishu.cn/*", "https://*.larksuite.com/*"]
+    }
+  ]
+} 
